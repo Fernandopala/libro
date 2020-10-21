@@ -8,7 +8,7 @@
           <div class="pull-left"><h3>Lista Libros</h3></div>
           <div class="pull-right">
             <div class="btn-group">
-              <a href="{{ route('libro.create') }}" class="btn btn-info" >Añadir Libro</a>
+              <a href="{{ route('Libro.create') }}" class="btn btn-info" >Añadir Libro</a>
             </div>
           </div>
           <div class="table-container">
@@ -25,9 +25,9 @@
               <tr>
                 <td>{{$libro->nombre}}</td>
                 <td>{{$libro->autor}}</td>
-                <td><a class="btn btn-primary btn-xs" href="{{action('LibroController@edit', $libro->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td><a class="btn btn-primary btn-xs" href="{{route('Libro.edit', $libro->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                 <td>
-                  <form action="{{action('LibroController@destroy', $libro->id)}}" method="post">
+                  <form action="{{route('Libro.destroy', $libro->id)}}" method="post">
                    {{csrf_field()}}
                    <input name="_method" type="hidden" value="DELETE">
  

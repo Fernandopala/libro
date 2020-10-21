@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-App\Libro;
+use App\Models\Libro; // arreglar la ubicacion del modelo
 
 use Illuminate\Http\Request;
 
